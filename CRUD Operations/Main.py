@@ -7,7 +7,7 @@
 '''
 
 from StudentDetails import *
-import logger
+import logging
 
 def Main():
     '''
@@ -16,7 +16,7 @@ def Main():
     Return: None
     '''
     try:
-        logger.info("Welcom to Student Database Management System")
+        logging.info("Welcom to Student Database Management System")
         user_input = ""
 
         while user_input != 'q':
@@ -33,37 +33,37 @@ def Main():
             connect = Student()
 
             if (user_input == "1"):
-                logger.info("Choosen to create a new table")
+                logging.info("Choosen to create a new table")
                 connect.create_table()
 
             elif (user_input == "2"):
-                logger.info("Choosen to drop the table")
+                logging.info("Choosen to drop the table")
                 connect.drop_table()
 
 
             elif (user_input == "3"):
-                logger.info("Choosen to insert record into table")
+                logging.info("Choosen to insert record into table")
                 connect.insert()
 
             elif (user_input == "4"):
-                logger.info("Choosen to retrieve records from table")
+                logging.info("Choosen to retrieve records from table")
                 connect.retrieve()
 
             elif (user_input == "5"):
-                logger.info("Choosen to update record from table")
+                logging.info("Choosen to update record from table")
                 connect.update()
 
             elif (user_input == "6"):
-                logger.info("Choosen to delete record from table")
+                logging.info("Choosen to delete record from table")
                 connect.retrieve()
                 connect.delete()
 
             elif user_input == "q":
-                logger.info("Choosen to quit")
+                logging.info("Choosen to quit")
                 break
 
             else:
-                logger.info("Please Select Proper Option")
+                logging.info("Please Select Proper Option")
 
     except:
         raise Exception("Unexpected Error Occured!")
